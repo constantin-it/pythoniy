@@ -3,6 +3,19 @@ m1, m2, m3 = input().split()
 m1 = int(m1)
 m2 = int(m2)
 m3 = int(m3)
-print(m1+m1)
-print(m2+m2)
-print(m3+m3)
+m_max = m1
+m_min = m1
+
+if m2 > m_max:
+    m_max = m2
+if m3 > m_max:
+    m_max = m3
+if m2 < m_min:
+    m_min = m2
+if m3 < m_min:
+    m_min = m3
+
+if m_min >= 94 and m_max <= 727:
+    print(m_max)
+else:
+    print("Error")
